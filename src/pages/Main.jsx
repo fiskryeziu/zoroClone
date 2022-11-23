@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { M } from './main.style'
 import logo from '../assets/images/logo.png'
 import zoro from '../assets/images/zoro.png'
-import { FaSearch, FaBars } from 'react-icons/fa'
+import zorosmall from '../assets/images/zoro-small.jpeg'
+import { FaSearch, FaBars, FaArrowCircleRight, FaComment } from 'react-icons/fa'
 
 const anime = [
   'Chainsaw Man',
@@ -63,6 +64,79 @@ const Main = () => {
           </M.iconWrapper>
         </M.Right>
       </M.Banner>
+      <M.Container>
+        <M.ButtonAction>
+          View Full Site <FaArrowCircleRight />
+        </M.ButtonAction>
+
+        <M.ShareButton>
+          <div style={{ marginLeft: '20px' }}>
+            <p>Share Zoro</p>
+            <span style={{ color: '#ccc' }}> to your friends</span>
+          </div>
+        </M.ShareButton>
+        <M.BoxWrapper>
+          <M.BoxLeft>
+            <h1 style={{ color: '#fff', fontSize: '28px' }}>
+              Zoro.to - The best site to watch anime online for Free
+            </h1>
+            <p>
+              Do you know that according to Google, the monthly search volume
+              for anime related topics is up to over 1 Billion times? Anime is
+              famous worldwide and it is no wonder we've seen a sharp rise in
+              the number of free anime streaming sites. <br></br> Just like free
+              online movie streaming sites, anime watching sites are not created
+              equally, some are better than the rest, so we've decided to build
+              Zoro.to to be one of the best free anime streaming site for all
+              anime fans on the world.
+            </p>
+            <p>
+              Do you know that according to Google, the monthly search volume
+              for anime related topics is up to over 1 Billion times? Anime is
+              famous worldwide and it is no wonder we've seen a sharp rise in
+              the number of free anime streaming sites. <br></br> Just like free
+              online movie streaming sites, anime watching sites are not created
+              equally, some are better than the rest, so we've decided to build
+              Zoro.to to be one of the best free anime streaming site for all
+              anime fans on the world.
+            </p>
+          </M.BoxLeft>
+          <M.BoxRight>
+            <M.Card>
+              <M.CardInfo>
+                <div style={{ display: 'flex', gap: '1em' }}>
+                  <p>#General</p> <p>2 hours ago</p>
+                </div>
+                <div
+                  style={{ display: 'flex', alignItems: 'center', gap: '.3em' }}
+                >
+                  <FaComment />
+                  <p>44</p>
+                </div>
+              </M.CardInfo>
+              <M.CardTitle>taco bell nacho fries are trash</M.CardTitle>
+              <M.CardText>
+                they dont taste that great ngl i like em but most of the time
+                the fries are cold and its hard to enjoy
+              </M.CardText>
+              <M.CardProfile>
+                <img
+                  src={zorosmall}
+                  alt=""
+                  width={30}
+                  height={30}
+                  style={{ borderRadius: '50%' }}
+                />
+                <p>Zoro</p>
+              </M.CardProfile>
+            </M.Card>
+          </M.BoxRight>
+        </M.BoxWrapper>
+        <M.Footer>
+          <p>©2021 Zoro.to. All rights reserved.</p>
+          <p>Mangareader - Read Manga Online For FREE</p>
+        </M.Footer>
+      </M.Container>
     </>
   )
 }

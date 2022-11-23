@@ -4,10 +4,15 @@ import img from '../assets/images/zoro-bg.jpg'
 export const M = {}
 
 M.Nav = styled.div`
+  max-width: 1200px;
   width: 100%;
-  margin-top: 3em;
+  height: 70px;
+  display: flex;
+  margin-top: 2.5em;
   position: relative;
-
+  @media only screen and (max-width: 1200px) {
+    margin: 0;
+  }
   @media only screen and (max-width: 800px) {
     display: flex;
   }
@@ -16,9 +21,10 @@ M.Ul = styled.div`
   display: flex;
   align-items: center;
   gap: 3em;
-  height: 50px;
-  padding-left: 5em;
-
+  padding-left: 5.5em;
+  @media only screen and (max-width: 1200px) {
+    padding-left: 2em;
+  }
   @media only screen and (max-width: 800px) {
     position: absolute;
     display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
@@ -69,7 +75,7 @@ M.Banner = styled.div`
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 80vh;
+  height: 75vh;
   align-items: center;
 
   &::before {
@@ -119,6 +125,9 @@ M.Left = styled.div`
   @media only screen and (max-width: 800px) {
     width: 100%;
     padding: 0 2em;
+  }
+  @media only screen and (max-width: 524px) {
+    align-items: center;
   }
 `
 M.Logo = styled.img`
@@ -200,4 +209,123 @@ M.Icon = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+`
+
+M.Container = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5em;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+
+  @media only screen and (max-width: 1200px) {
+    padding: 0 0.5em;
+  }
+`
+
+M.ButtonAction = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 20px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: 1px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #cae962;
+  margin-top: -5px;
+  z-index: 2;
+
+  @media only screen and (max-width: 524px) {
+    border-radius: 40px;
+    margin-top: -30px;
+  }
+`
+M.ShareButton = styled.div`
+  position: relative;
+  padding: 20px 20px;
+  background-color: #121315;
+  border-radius: 10px;
+  color: #cae962;
+  font-size: 14px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background-color: #cae962;
+  }
+`
+M.BoxWrapper = styled.div`
+  display: flex;
+  @media only screen and (max-width: 1000px) {
+    gap: 1em;
+    flex-direction: column;
+  }
+`
+M.BoxRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  float: right;
+  color: #aaa;
+  gap: 2em;
+
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+  }
+`
+M.BoxLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 450px);
+  color: #aaa;
+  padding: 0 2em;
+  gap: 2em;
+  float: left;
+
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    padding: 0;
+  }
+`
+M.Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: #aaa;
+  padding: 1em;
+  background: rgb(255, 255, 255, 0.05);
+  border-radius: 10px;
+  gap: 1em;
+  width: 100%;
+`
+M.CardInfo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+M.CardTitle = styled.h1`
+  font-size: 18px;
+  color: #fff;
+`
+M.CardText = styled.p``
+M.CardProfile = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1em;
+`
+M.Footer = styled.footer`
+  margin-top: 2em;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  color: #aaa;
 `
