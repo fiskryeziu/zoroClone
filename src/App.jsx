@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import NavBar from './components/NavBar/NavBar'
 import Airing from './pages/Airing'
 import Error from './pages/Error'
 import Home from './pages/Home'
