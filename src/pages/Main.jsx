@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { M } from './main.style'
 import logo from '../assets/images/logo.png'
 import zoro from '../assets/images/zoro.png'
@@ -28,11 +29,31 @@ const Main = () => {
     <>
       <M.Nav>
         <M.Ul isOpen={isOpen}>
-          <M.Li>Home</M.Li>
-          <M.Li>Movies</M.Li>
-          <M.Li>Tv Series</M.Li>
-          <M.Li>Most Popular</M.Li>
-          <M.Li>Top Airing</M.Li>
+          <M.Li>
+            <Link to="/home" onClick={clickHandler}>
+              Home
+            </Link>
+          </M.Li>
+          <M.Li>
+            <Link to="/movies" onClick={clickHandler}>
+              Movies
+            </Link>
+          </M.Li>
+          <M.Li>
+            <Link to="/tv-series" onClick={clickHandler}>
+              Tv Series
+            </Link>
+          </M.Li>
+          <M.Li>
+            <Link to="/most-popular" onClick={clickHandler}>
+              Most Popular
+            </Link>
+          </M.Li>
+          <M.Li>
+            <Link to="/top-airing" onClick={clickHandler}>
+              Top Airing
+            </Link>
+          </M.Li>
         </M.Ul>
         <M.MenuOpen isOpen={isOpen} onClick={clickHandler}>
           <FaBars />
@@ -65,9 +86,9 @@ const Main = () => {
         </M.Right>
       </M.Banner>
       <M.Container>
-        <M.ButtonAction>
+        <M.Action to="/home">
           View Full Site <FaArrowCircleRight />
-        </M.ButtonAction>
+        </M.Action>
 
         <M.ShareButton>
           <div style={{ marginLeft: '20px' }}>

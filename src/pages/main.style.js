@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import img from '../assets/images/zoro-bg.jpg'
+import { Link } from 'react-router-dom'
 
 export const M = {}
 
@@ -62,7 +63,6 @@ M.Li = styled.div`
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1px;
-  cursor: pointer;
 
   &:hover {
     color: #cae962;
@@ -225,7 +225,7 @@ M.Container = styled.div`
   }
 `
 
-M.ButtonAction = styled.div`
+M.Action = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
