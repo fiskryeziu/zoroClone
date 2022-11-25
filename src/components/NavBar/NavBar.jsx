@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   FaBars,
   FaDiscord,
@@ -15,12 +15,24 @@ import { BsBroadcast } from 'react-icons/bs'
 import { N } from './navbar.style'
 import logo from '../../assets/images/logo.png'
 import zorosmall from '../../assets/images/zoro-small.jpeg'
+import SideBar from './SideBar'
 
 const NavBar = () => {
+  const [open, setOpen] = useState(false)
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add('body-hidden')
+    } else {
+      document.body.classList.remove('body-hidden')
+    }
+  }, [open])
   return (
     <N.Nav>
+      {/* background layout   */}
+      <N.LayoutBg open={open}></N.LayoutBg>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1em' }}>
-        <FaBars size={24} color="#fff" />
+        <FaBars size={24} color="#fff" onClick={() => setOpen(!open)} />
+        {open && <SideBar open={open} setOpen={setOpen} />}
         <N.Logo>
           <N.LogoImg src={logo} alt="logo" />
         </N.Logo>

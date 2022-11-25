@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { FaDiscord, FaSearch } from 'react-icons/fa'
+import { FaSearch } from 'react-icons/fa'
 
 export const N = {}
 
@@ -11,12 +11,21 @@ N.Nav = styled.nav`
   gap: 1em;
   padding-left: 1em;
   height: 70px;
+  margin-bottom: 2000px;
 
-  /* background-color: blue; */
+  @media only screen and (max-width: 578px) {
+    height: 50px;
+    gap: 0;
+    padding-left: 0.3em;
+  }
 `
 N.Logo = styled.div`
   display: block;
   height: 40px;
+
+  @media only screen and (max-width: 578px) {
+    height: 34px;
+  }
 `
 N.LogoImg = styled.img`
   width: auto;
@@ -127,6 +136,9 @@ N.Button = styled.button`
 N.Profile = styled.div`
   display: flex;
   padding-right: 1.4em;
+  @media only screen and (max-width: 578px) {
+    padding-right: 0.4em;
+  }
 `
 N.ProfileItem = styled.div`
   display: flex;
@@ -148,6 +160,8 @@ N.ProfileItem = styled.div`
     &:nth-child(1) {
       display: flex;
     }
+    width: 30px;
+    height: 30px;
   }
 `
 N.ProfileSearch = styled(FaSearch)`
@@ -160,4 +174,14 @@ N.ProfileImg = styled.img`
   width: 100%;
   height: 100%;
   border-radius: 50%;
+`
+N.LayoutBg = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(32, 33, 37, 0.8);
+  z-index: 4;
+  display: ${({ open }) => (open ? 'block' : 'none')};
 `
