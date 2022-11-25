@@ -16,7 +16,7 @@ S.SideMenu = styled.div`
   overflow-y: auto;
   gap: 1em;
   z-index: 5;
-  transition: all 500ms ease;
+  transition: transform 500ms ease;
 `
 
 S.CloseButton = styled.button`
@@ -57,4 +57,32 @@ S.CommunityBtn = styled.button`
   padding: 0 1rem;
   color: #fff;
   background-color: #222327;
+`
+S.NavList = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+`
+S.Item = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  padding: 1em 1em;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+`
+
+S.GenreList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+`
+S.GenreItem = styled.p`
+  padding: 6px 15px;
+  width: 49%;
+  margin-right: 1%;
 `

@@ -32,7 +32,7 @@ const NavBar = () => {
       <N.LayoutBg open={open}></N.LayoutBg>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1em' }}>
         <FaBars size={24} color="#fff" onClick={() => setOpen(!open)} />
-        {open && <SideBar open={open} setOpen={setOpen} />}
+        <SideBar open={open} setOpen={setOpen} />
         <N.Logo>
           <N.LogoImg src={logo} alt="logo" />
         </N.Logo>
