@@ -29,9 +29,14 @@ const NavBar = () => {
   return (
     <N.Nav>
       {/* background layout   */}
-      <N.LayoutBg open={open}></N.LayoutBg>
+      <N.LayoutBg open={open} onClick={() => setOpen(false)}></N.LayoutBg>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1em' }}>
-        <FaBars size={24} color="#fff" onClick={() => setOpen(!open)} />
+        <FaBars
+          size={24}
+          color="#fff"
+          style={{ cursor: 'pointer' }}
+          onClick={() => setOpen(true)}
+        />
         <SideBar open={open} setOpen={setOpen} />
         <N.Logo>
           <N.LogoImg src={logo} alt="logo" />

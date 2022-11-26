@@ -1,14 +1,29 @@
-import React from 'react'
-import { FaAngleLeft, FaComments } from 'react-icons/fa'
+import React, { useEffect } from 'react'
+import { BsBroadcast } from 'react-icons/bs'
+import { FaAngleLeft, FaComments, FaLanguage, FaRandom } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { S } from './sidebar.style'
 
 const SideBar = ({ open, setOpen }) => {
   return (
     <S.SideMenu open={open}>
-      <S.CloseButton onClick={() => setOpen(!open)}>
+      <S.CloseButton onClick={() => setOpen(false)}>
         <FaAngleLeft /> Close menu
       </S.CloseButton>
+      <S.SettingsIcon>
+        <S.SettingsItem>
+          <BsBroadcast size={20} color="#cae962" />
+          <p>Watch2gether</p>
+        </S.SettingsItem>
+        <S.SettingsItem>
+          <FaRandom size={20} color="#cae962" />
+          <p>Random</p>
+        </S.SettingsItem>
+        <S.SettingsItem>
+          <FaLanguage size={20} color="#cae962" />
+          <p>Anime name</p>
+        </S.SettingsItem>
+      </S.SettingsIcon>
       <S.DonateBtn>Donate</S.DonateBtn>
       <S.CommunityBtn>
         <FaComments size={14} color="#cae962" />

@@ -9,7 +9,7 @@ S.SideMenu = styled.div`
   top: 0;
   left: 0;
   height: 100vh;
-  width: 250px;
+  width: 260px;
   background-color: #2a2c31;
   transform: ${({ open }) => (!open ? 'translateX(-350px)' : 'translateX(0)')};
   margin-bottom: 2000px;
@@ -17,6 +17,10 @@ S.SideMenu = styled.div`
   gap: 1em;
   z-index: 5;
   transition: transform 500ms ease;
+
+  @media only screen and (max-width: 860px) {
+    width: 300px;
+  }
 `
 
 S.CloseButton = styled.button`
@@ -32,6 +36,7 @@ S.CloseButton = styled.button`
   color: #fff;
   font-weight: 500;
   gap: 0.3em;
+  cursor: pointer;
 `
 S.DonateBtn = styled.button`
   line-height: 36px;
@@ -57,6 +62,28 @@ S.CommunityBtn = styled.button`
   padding: 0 1rem;
   color: #fff;
   background-color: #222327;
+`
+S.SettingsIcon = styled.div`
+  display: none;
+  align-items: center;
+  margin: 0 auto;
+  gap: 1em;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: auto;
+  padding: 15px;
+
+  @media only screen and (max-width: 760px) {
+    display: flex;
+  }
+`
+S.SettingsItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #fff;
+  gap: 0.2em;
 `
 S.NavList = styled.div`
   display: flex;
@@ -85,4 +112,26 @@ S.GenreItem = styled.p`
   padding: 6px 15px;
   width: 49%;
   margin-right: 1%;
+
+  &:nth-of-type(7n + 1) {
+    color: #d0e6a5;
+  }
+  &:nth-of-type(7n + 2) {
+    color: #ffdd95;
+  }
+  &:nth-of-type(7n + 3) {
+    color: #fc887b;
+  }
+  &:nth-of-type(7n + 4) {
+    color: #ccabda;
+  }
+  &:nth-of-type(7n + 5) {
+    color: #abccd8;
+  }
+  &:nth-of-type(7n + 6) {
+    color: #d8b2ab;
+  }
+  &:nth-of-type(7n) {
+    color: #86e3ce;
+  }
 `
