@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -225,7 +226,7 @@ H.WatchBtn = styled.div`
     flex-wrap: wrap;
   }
 `
-H.WatchLink = styled.a`
+H.WatchLink = styled(Link)`
   display: flex;
   align-items: center;
   gap: 0.3em;
@@ -241,7 +242,7 @@ H.WatchLink = styled.a`
     font-size: 12px;
   }
 `
-H.DetailLink = styled.a`
+H.DetailLink = styled(Link)`
   display: flex;
   align-items: center;
   padding: 0.5em 0.6em;
