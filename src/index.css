@@ -50,3 +50,84 @@ body {
     right: 0;
     left: 0;
 }
+
+.btn-prev,
+.btn-next {
+    position: absolute;
+    background-color: #2a2b31;
+    border-radius: 5px;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+
+.btn-prev {
+    bottom: 2em;
+    right: 1em;
+
+}
+
+.btn-next {
+    bottom: 5em;
+    right: 1em;
+
+}
+
+
+.btn-prev:hover,
+.btn-next:hover {
+    background-color: #cae962;
+    color: #000;
+}
+
+
+
+.swiper-pagination {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    gap: 1em;
+    top: auto;
+    right: 10px;
+    width: auto !important;
+    left: auto !important;
+    margin: 0;
+    transform: translateY(-100%);
+
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 3px;
+    display: inline-block;
+    border-radius: 100%;
+    opacity: 1;
+    background: #fff;
+    vertical-align: middle;
+    box-shadow: 0 0 3px rgb(0 0 0 / 50%);
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #ffc107;
+    margin: 0;
+}
+
+@media screen and (max-width: 575px) {
+
+    .btn-prev,
+    .btn-next {
+        display: none;
+    }
+
+    .swiper-pagination {
+        display: flex;
+    }
+}

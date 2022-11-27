@@ -4,16 +4,22 @@ import { FaSearch } from 'react-icons/fa'
 export const N = {}
 
 N.Nav = styled.nav`
-  width: 100%;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: 70px;
   gap: 1em;
   padding-left: 1em;
-  height: 70px;
-  margin-bottom: 2000px;
+  background-color: rgba(32, 33, 37, 0);
+  z-index: 5;
 
-  @media only screen and (max-width: 578px) {
+  @media screen and (max-width: 1299px) {
+    position: relative;
+    background: #2a2c31;
+  }
+  @media screen and (max-width: 578px) {
     height: 50px;
     gap: 0;
     padding-left: 0.3em;
