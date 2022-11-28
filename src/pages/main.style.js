@@ -45,10 +45,10 @@ M.Ul = styled.div`
 M.MenuOpen = styled.div`
   display: none;
   color: ${({ isOpen }) => (isOpen ? '#cae962' : '#fff')};
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 1px;
-  padding-left: 5em;
+  padding-left: 2em;
   cursor: pointer;
 
   @media only screen and (max-width: 800px) {
@@ -230,7 +230,7 @@ M.Action = styled(Link)`
   align-items: center;
   justify-content: center;
   gap: 1em;
-  padding: 20px 20px;
+  padding: 15px 20px;
   font-size: 20px;
   font-weight: 700;
   color: #111;
@@ -244,6 +244,7 @@ M.Action = styled(Link)`
   @media only screen and (max-width: 524px) {
     border-radius: 40px;
     margin-top: -30px;
+    font-size: 18px;
   }
 `
 M.ShareButton = styled.div`
