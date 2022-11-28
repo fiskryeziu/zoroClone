@@ -120,6 +120,37 @@ body {
     margin: 0;
 }
 
+.btn-nextTwo,
+.btn-prevTwo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #2a2b31;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    outline: 0;
+    box-shadow: none;
+    color: #fff;
+}
+
+.btn-nextTwo:hover,
+.btn-prevTwo:hover {
+    background-color: #cae962;
+    color: #111;
+}
+
+.btn-prevTwo {
+    bottom: 0;
+    top: auto;
+
+}
+
 @media screen and (max-width: 575px) {
 
     .btn-prev,

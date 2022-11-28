@@ -19,15 +19,31 @@ import SideBar from './SideBar'
 
 const NavBar = () => {
   const [open, setOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   useEffect(() => {
     if (open) {
       document.body.classList.add('body-hidden')
     } else {
       document.body.classList.remove('body-hidden')
     }
-  }, [open])
+
+    window.addEventListener('scroll', () => {
+      if (scrollY == '0') {
+        setIsScrolled(false)
+      } else {
+        setIsScrolled(true)
+      }
+    })
+    window.addEventListener('load', () => {
+      if (scrollY == '0') {
+        setIsScrolled(false)
+      } else {
+        setIsScrolled(true)
+      }
+    })
+  }, [open, isScrolled])
   return (
-    <N.Nav>
+    <N.Nav isScrolled={isScrolled}>
       {/* background layout   */}
       <N.LayoutBg open={open} onClick={() => setOpen(false)}></N.LayoutBg>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1em' }}>

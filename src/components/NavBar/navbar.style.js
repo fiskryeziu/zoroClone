@@ -12,7 +12,9 @@ N.Nav = styled.nav`
   height: 70px;
   gap: 1em;
   padding-left: 1em;
-  background-color: rgba(32, 33, 37, 0);
+  background-color: ${({ isScrolled }) =>
+    isScrolled ? 'rgba(32, 33, 37, 0.9)' : 'rgba(32, 33, 37, 0)'};
+  transition: all ease 250ms;
   z-index: 5;
 
   @media screen and (max-width: 1299px) {

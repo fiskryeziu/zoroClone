@@ -1,11 +1,9 @@
 import React from 'react'
 import {
   FaCalendar,
-  FaCaretRight,
   FaChevronLeft,
   FaChevronRight,
   FaClock,
-  FaHdd,
   FaPlayCircle,
 } from 'react-icons/fa'
 import SwiperCore, {
@@ -19,7 +17,6 @@ import 'swiper/swiper-bundle.css'
 import { H } from './hero.style'
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay])
 import { data } from './data'
-import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
