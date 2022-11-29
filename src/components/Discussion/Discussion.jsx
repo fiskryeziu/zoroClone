@@ -4,7 +4,7 @@ import img from '../../assets/images/discussion.png'
 
 const Discussion = () => {
   const [show, setShow] = useState(false)
-  const Display = show ? D.ToggleDisplay : D.ToggleDisplayOff
+  const [active, setActive] = useState(true)
   return (
     <D.Container>
       {show && (
@@ -22,8 +22,12 @@ const Discussion = () => {
         {show && (
           <>
             <D.NavTabs>
-              <li>new comments</li>
-              <li>top comments</li>
+              <D.TabOne active={active} onClick={() => setActive(!active)}>
+                Newest Comments
+              </D.TabOne>
+              <D.TabTwo active={!active} onClick={() => setActive(!active)}>
+                Top Comments
+              </D.TabTwo>
             </D.NavTabs>
             <D.Comments>
               <D.CommentCard>comment 1 </D.CommentCard>

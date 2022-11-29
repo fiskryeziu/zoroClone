@@ -32,12 +32,48 @@ D.WrapperRight = styled.div`
   width: ${({ show }) => (show ? 'calc(100%-390px)' : '100%')};
   height: 400px;
   position: relative;
+  color: #fff;
 `
 D.NavTabs = styled.ul`
   display: flex;
+  align-items: center;
   width: 100%;
   gap: 1em;
   margin-bottom: 1em;
+`
+D.TabOne = styled.li`
+  font-size: 12px;
+  padding: 0.6em 1em;
+  border: 1px solid transparent;
+
+  &:hover {
+    color: #cae962;
+  }
+  ${({ active }) =>
+    active &&
+    ` 
+    padding: 0.6em 1em;
+    border: 1px solid #cae962;
+    border-radius: 20px;
+    color: #cae962;
+  `}
+`
+D.TabTwo = styled.li`
+  font-size: 12px;
+  padding: 0.6em 1em;
+  border: 1px solid transparent;
+
+  &:hover {
+    color: #cae962;
+  }
+  ${({ active }) =>
+    active &&
+    ` 
+    padding: 0.6em 1em;
+    border: 1px solid #cae962;
+    border-radius: 20px;
+    color: #cae962;
+`}
 `
 D.ToggleDisplay = styled.div`
   position: absolute;
