@@ -1,0 +1,114 @@
+import styled from 'styled-components'
+
+export const D = {}
+
+D.Container = styled.div`
+  display: flex;
+  margin-bottom: 3000px;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  background: #313136;
+  background: linear-gradient(0deg, #313136 0, rgba(49, 49, 54, 0) 100%);
+`
+
+D.WrapperLeft = styled.div`
+  display: block;
+  position: relative;
+  width: 400px;
+  height: 400px;
+`
+D.Img = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`
+
+D.WrapperRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: ${({ show }) => (show ? 'calc(100%-390px)' : '100%')};
+  height: 400px;
+  position: relative;
+`
+D.NavTabs = styled.ul`
+  display: flex;
+  width: 100%;
+  gap: 1em;
+  margin-bottom: 1em;
+`
+D.ToggleDisplay = styled.div`
+  position: absolute;
+  top: 4.5em;
+  right: 0;
+  height: 20px;
+
+  ${({ active }) =>
+    !active &&
+    `
+    position: absolute;
+    padding: 10px 15px;
+    min-width: 190px;
+    border: 1px solid #5c5d63;
+    border-radius: 10px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4em;
+    height: 42px;
+  `}
+`
+D.ToggleDisplayOff = styled.div`
+  position: absolute;
+  padding: 10px 15px;
+  min-width: 190px;
+  border: 1px solid #5c5d63;
+  border-radius: 10px;
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 4em;
+  height: 42px;
+`
+D.ToggleText = styled.div`
+  float: left;
+  margin-right: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+`
+D.ToggleDiv = styled.div`
+  display: inline-block;
+  width: 44px;
+  background: #4d5059;
+  height: 24px;
+  border-radius: 24px;
+  position: relative;
+  cursor: pointer;
+`
+D.Toggle = styled.span`
+  background: ${({ show }) => (show ? '#cae962' : 'rgba(255,255,255,.5)')};
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
+  position: absolute;
+  left: ${({ show }) => (show ? 'calc(100% - 24px)' : '0px')};
+  transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+`
+D.Comments = styled.div`
+  display: flex;
+  width: 100%;
+  gap: 1em;
+  overflow: hidden;
+`
+D.CommentCard = styled.div`
+  display: block;
+  width: 224px;
+  height: 224px;
+  background-color: gray;
+`
