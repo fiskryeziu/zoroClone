@@ -16,7 +16,7 @@ D.Container = styled.div`
 D.WrapperLeft = styled.div`
   display: block;
   position: relative;
-  width: 400px;
+  width: 30%;
   height: 400px;
 `
 D.Img = styled.img`
@@ -29,7 +29,7 @@ D.WrapperRight = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: ${({ show }) => (show ? 'calc(100%-390px)' : '100%')};
+  width: ${({ show }) => (show ? '70%' : '100%')};
   height: 400px;
   position: relative;
   color: #fff;
@@ -77,8 +77,8 @@ D.TabTwo = styled.li`
 `
 D.ToggleDisplay = styled.div`
   position: absolute;
-  top: 4.5em;
-  right: 0;
+  top: 5.5em;
+  right: 1em;
   height: 20px;
 
   ${({ active }) =>
@@ -92,7 +92,6 @@ D.ToggleDisplay = styled.div`
     right: auto;
     left: 50%;
     transform: translateX(-50%);
-    top: 4em;
     height: 42px;
   `}
 `
@@ -135,16 +134,4 @@ D.Toggle = styled.span`
   left: ${({ show }) => (show ? 'calc(100% - 24px)' : '0px')};
   transition: all 0.2s ease 0s;
   -webkit-transition: all 0.2s ease 0s;
-`
-D.Comments = styled.div`
-  display: flex;
-  width: 100%;
-  gap: 1em;
-  overflow: hidden;
-`
-D.CommentCard = styled.div`
-  display: block;
-  width: 224px;
-  height: 224px;
-  background-color: gray;
 `

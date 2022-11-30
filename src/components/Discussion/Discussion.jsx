@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { D } from './discussion.style'
 import img from '../../assets/images/discussion.png'
+import CommentSlider from './CommentSlider'
 
 const Discussion = () => {
   const [show, setShow] = useState(false)
@@ -29,12 +30,7 @@ const Discussion = () => {
                 Top Comments
               </D.TabTwo>
             </D.NavTabs>
-            <D.Comments>
-              <D.CommentCard>comment 1 </D.CommentCard>
-              <D.CommentCard>comment 2 </D.CommentCard>
-              <D.CommentCard>comment 3 </D.CommentCard>
-              <D.CommentCard>comment 4 </D.CommentCard>
-            </D.Comments>
+            <CommentSlider />
           </>
         )}
       </D.WrapperRight>
