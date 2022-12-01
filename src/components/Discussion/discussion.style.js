@@ -85,7 +85,7 @@ D.TabTwo = styled.li`
 `
 D.ToggleDisplay = styled.div`
   position: absolute;
-  top: 4.7em;
+  top: 4.4em;
   right: 1em;
   height: 20px;
 
