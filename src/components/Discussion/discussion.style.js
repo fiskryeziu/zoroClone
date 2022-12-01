@@ -18,6 +18,10 @@ D.WrapperLeft = styled.div`
   position: relative;
   width: 30%;
   height: 400px;
+
+  @media screen and (max-width: 1300px) {
+    display: none;
+  }
 `
 D.Img = styled.img`
   width: 100%;
@@ -33,6 +37,10 @@ D.WrapperRight = styled.div`
   height: 400px;
   position: relative;
   color: #fff;
+
+  @media screen and (max-width: 1300px) {
+    width: 100%;
+  }
 `
 D.NavTabs = styled.ul`
   display: flex;
@@ -77,7 +85,7 @@ D.TabTwo = styled.li`
 `
 D.ToggleDisplay = styled.div`
   position: absolute;
-  top: 5.5em;
+  top: 4.7em;
   right: 1em;
   height: 20px;
 
