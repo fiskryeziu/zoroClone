@@ -45,10 +45,11 @@ C.Poster = styled.div`
       bottom: 0;
       height: 100%;
       z-index: 1;
-      background: #2a2c31;
-      background: linear-gradient(0deg, #2a2c31 0, rgba(42, 44, 49, 0.7) 100%);
+      background-color: rgba(42, 44, 49, 0.6);
+      transition: all 250ms ease;
     }
   }
+
   &::after {
     content: '';
     position: absolute;

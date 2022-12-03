@@ -9,6 +9,10 @@ M.MainWrapper = styled.div`
     flex-direction: column;
   }
 `
+M.Heading = styled.h2`
+  color: #cae962;
+  margin: 1em 0;
+`
 
 M.Main = styled.main`
   width: 75%;
