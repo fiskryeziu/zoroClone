@@ -8,7 +8,6 @@ F.Container = styled.div`
   width: auto;
   flex-wrap: wrap;
   margin-top: 3em;
-  margin-bottom: 2000px;
 `
 F.Cart = styled.div`
   max-width: 25%;
