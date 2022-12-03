@@ -9,7 +9,7 @@ const Cart = () => {
       <F.CartBox>
         <F.CartTitle>Top Airing</F.CartTitle>
         <F.CartList>
-          {[1, 2, 3, 4].map((item, idx) => (
+          {[1, 2, 3, 4, 5].map((item, idx) => (
             <CartItem key={idx} />
           ))}
         </F.CartList>
