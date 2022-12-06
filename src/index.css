@@ -48,7 +48,13 @@ label {
     font-weight: 500;
     font-size: 13px;
     text-align: center;
+    cursor: pointer;
+}
 
+#active {
+    border-bottom: 3px solid #cae962;
+    padding-bottom: 6px;
+    color: #fff;
 }
 
 .body-hidden {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Content from './Content'
 import { M } from './mostviewed.style'
 
 const MostViewedCard = () => {
@@ -40,6 +41,7 @@ const MostViewedCard = () => {
           <label htmlFor="month">Month</label>
         </M.Wrapper>
       </M.Nav>
+      <Content />
     </M.Card>
   )
 }
