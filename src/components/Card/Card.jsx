@@ -6,7 +6,7 @@ const Card = () => {
   return (
     <C.Card>
       <C.Poster>
-        <C.Image src={poster} alt="" />
+        <C.Image src={poster} />
         <C.InfoL>
           <C.BtnL>SUB</C.BtnL> <C.BtnL>DUB</C.BtnL>
         </C.InfoL>

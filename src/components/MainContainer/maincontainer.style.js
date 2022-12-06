@@ -13,6 +13,10 @@ M.Heading = styled.h2`
   color: #cae962;
   margin: 1em 0;
 `
+M.MovieList = styled.div`
+  display: inline-block;
+  margin-bottom: 2em;
+`
 
 M.Main = styled.main`
   width: 75%;
@@ -35,7 +39,4 @@ M.Aside = styled.aside`
     width: 100%;
     padding: 0;
   }
-`
-M.MovieList = styled.div`
-  display: block;
 `

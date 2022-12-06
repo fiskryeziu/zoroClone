@@ -85,14 +85,14 @@ C.InfoL = styled.div`
   display: flex;
   bottom: 3px;
   left: 10px;
-  z-index: 10;
+  z-index: 3;
 `
 
 C.InfoR = styled.div`
   position: absolute;
   bottom: 3px;
   right: 10px;
-  z-index: 10;
+  z-index: 3;
 `
 
 C.BtnL = styled.div`
