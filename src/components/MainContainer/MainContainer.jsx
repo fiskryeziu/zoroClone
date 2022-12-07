@@ -2,6 +2,7 @@ import React from 'react'
 import Card from '../Card/Card'
 import GenreCard from '../GenreCard/GenreCard'
 import MostViewedCard from '../MostViewedCard/MostViewedCard'
+import TrendingPosts from '../TredingPosts/TrendingPosts'
 import { M } from './maincontainer.style'
 
 const MainContainer = () => {
@@ -26,6 +27,8 @@ const MainContainer = () => {
         <GenreCard />
         <M.Heading>Most Viewed</M.Heading>
         <MostViewedCard />
+        <M.Heading>Trending Posts</M.Heading>
+        <TrendingPosts />
       </M.Aside>
     </M.MainWrapper>
   )
