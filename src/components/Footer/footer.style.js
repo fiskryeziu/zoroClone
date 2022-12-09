@@ -131,6 +131,12 @@ F.Button = styled.li`
   display: inline-block;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    color: #111;
+    background: #cae962;
+  }
 `
 F.Links = styled.div`
   display: flex;
