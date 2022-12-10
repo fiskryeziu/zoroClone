@@ -4,7 +4,7 @@ import { FaSearch } from 'react-icons/fa'
 export const N = {}
 
 N.Nav = styled.nav`
-  position: fixed;
+  position: ${({ fixed }) => (fixed ? 'fixed' : 'relative')};
   display: flex;
   justify-content: space-between;
   align-items: center;

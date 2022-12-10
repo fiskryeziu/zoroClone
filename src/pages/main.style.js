@@ -247,22 +247,7 @@ M.Action = styled(Link)`
     font-size: 18px;
   }
 `
-M.ShareButton = styled.div`
-  position: relative;
-  padding: 20px 20px;
-  background-color: #121315;
-  border-radius: 10px;
-  color: #cae962;
-  font-size: 14px;
 
-  &::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 40px;
-    background-color: #cae962;
-  }
-`
 M.BoxWrapper = styled.div`
   display: flex;
   @media only screen and (max-width: 1000px) {

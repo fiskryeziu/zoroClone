@@ -5,6 +5,7 @@ import logo from '../assets/images/logo.png'
 import zoro from '../assets/images/zoro.png'
 import zorosmall from '../assets/images/zoro-small.jpeg'
 import { FaSearch, FaBars, FaArrowCircleRight, FaComment } from 'react-icons/fa'
+import ShareButton from '../components/ShareButton'
 
 const anime = [
   'Chainsaw Man',
@@ -90,12 +91,7 @@ const Main = () => {
           View Full Site <FaArrowCircleRight />
         </M.Action>
 
-        <M.ShareButton>
-          <div style={{ marginLeft: '20px' }}>
-            <p>Share Zoro</p>
-            <span style={{ color: '#ccc' }}> to your friends</span>
-          </div>
-        </M.ShareButton>
+        <ShareButton />
         <M.BoxWrapper>
           <M.BoxLeft>
             <h1 style={{ color: '#fff', fontSize: '28px' }}>

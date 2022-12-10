@@ -16,10 +16,15 @@ import { N } from './navbar.style'
 import logo from '../../assets/images/logo.png'
 import zorosmall from '../../assets/images/zoro-small.jpeg'
 import SideBar from './SideBar'
+import { useLocation } from 'react-router-dom'
 
 const NavBar = () => {
   const [open, setOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [fixed, setFixed] = useState(null)
+
+  const location = useLocation()
+  const locationPath = location.pathname.slice(1)
   useEffect(() => {
     if (open) {
       document.body.classList.add('body-hidden')
@@ -42,8 +47,16 @@ const NavBar = () => {
       }
     })
   }, [open, isScrolled])
+
+  useEffect(() => {
+    if (locationPath === 'home') {
+      setFixed(true)
+    } else {
+      setFixed(false)
+    }
+  }, [locationPath])
   return (
-    <N.Nav isScrolled={isScrolled}>
+    <N.Nav isScrolled={isScrolled} fixed={fixed}>
       {/* background layout   */}
       <N.LayoutBg open={open} onClick={() => setOpen(false)}></N.LayoutBg>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1em' }}>
