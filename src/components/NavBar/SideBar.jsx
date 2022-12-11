@@ -34,10 +34,10 @@ const SideBar = ({ open, setOpen }) => {
           <Link to="/home">Home</Link>
         </S.Item>
         <S.Item>
-          <Link to="/subbed-anime">Subbed anime</Link>
+          <Link to="/tv-series">Subbed anime</Link>
         </S.Item>
         <S.Item>
-          <Link to="/dubbed-anime">Dubbed anime</Link>
+          <Link to="/tv-series">Dubbed anime</Link>
         </S.Item>
         <S.Item>
           <Link to="/most-popular">Most popular</Link>
@@ -46,7 +46,7 @@ const SideBar = ({ open, setOpen }) => {
           <Link to="/movies">Movies</Link>
         </S.Item>
         <S.Item>
-          <Link to="/series">Tv Series</Link>
+          <Link to="/tv-series">Tv Series</Link>
         </S.Item>
         <S.Item>
           <Link to="/ovas">OVAs</Link>

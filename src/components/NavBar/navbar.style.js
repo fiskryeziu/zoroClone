@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { FaSearch } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 export const N = {}
 
@@ -27,7 +28,7 @@ N.Nav = styled.nav`
     padding-left: 0.3em;
   }
 `
-N.Logo = styled.div`
+N.Logo = styled(Link)`
   display: block;
   height: 40px;
 

@@ -67,7 +67,7 @@ const NavBar = () => {
           onClick={() => setOpen(true)}
         />
         <SideBar open={open} setOpen={setOpen} />
-        <N.Logo>
+        <N.Logo to="/">
           <N.LogoImg src={logo} alt="logo" />
         </N.Logo>
         <N.SearchForm>
