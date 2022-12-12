@@ -2,10 +2,21 @@ import React, { useState } from 'react'
 import { D } from './discussion.style'
 import img from '../../assets/images/discussion.png'
 import CommentSlider from './CommentSlider'
+import { useEffect } from 'react'
+import useLocalStorage from '../../hooks/useLocalStorage'
 
 const Discussion = () => {
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useLocalStorage('show', true)
   const [active, setActive] = useState(true)
+
+  useEffect(() => {
+    const data = localStorage.getItem('show')
+    if (data !== null) setShow(Boolean(JSON.parse(data)))
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('show', JSON.stringify(show))
+  })
   return (
     <D.Container>
       {show && (

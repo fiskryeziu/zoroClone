@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 import Discussion from '../components/Discussion/Discussion'
 import Featured from '../components/Featured/Featured'
 import Footer from '../components/Footer/Footer'
