@@ -16,11 +16,11 @@ import SwiperCore, {
 import 'swiper/swiper-bundle.css'
 import { H } from './hero.style'
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay])
-import useAnime from '../../hooks/useAnime'
+import useTrendingAnime from '../../hooks/useTrendingAnime'
 import { format } from 'date-fns'
 
 const Hero = () => {
-  const { data, isFetched, isLoading } = useAnime()
+  const { data, isFetched } = useTrendingAnime()
 
   return (
     <H.Swiper
