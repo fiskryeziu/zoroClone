@@ -4,23 +4,24 @@ import GenreCard from '../GenreCard/GenreCard'
 import MostViewedCard from '../MostViewedCard/MostViewedCard'
 import TrendingPosts from '../TredingPosts/TrendingPosts'
 import { M } from './maincontainer.style'
+import useTopAnime from '../../hooks/useTopAnime'
 
 const MainContainer = () => {
+  const { data, isFetched } = useTopAnime()
+  console.log(data)
   return (
     <M.MainWrapper>
       <M.Main>
         <M.Heading>Latest Episode</M.Heading>
         <M.MovieList>
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item, idx) => (
-            <Card key={idx} />
-          ))}
+          {isFetched && data.map((item, idx) => <Card key={idx} data={item} />)}
         </M.MovieList>
-        <M.Heading>New on Zoro</M.Heading>
+        {/* <M.Heading>New on Zoro</M.Heading>
         <M.MovieList>
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item, idx) => (
             <Card key={idx} />
           ))}
-        </M.MovieList>
+        </M.MovieList> */}
       </M.Main>
       <M.Aside>
         <M.Heading>Genres</M.Heading>

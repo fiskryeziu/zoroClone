@@ -3,11 +3,10 @@ import axios from 'axios'
 import { useQuery } from '@tanstack/react-query'
 
 export const TopAiringAnime = async () => {
-  const { data } = await axios.get(
-    'https://api.jikan.moe/v4/top/anime?filter=upcoming'
-  )
-  return data
+  const { data } = await axios.get('https://api.jikan.moe/v4/watch/episodes')
+  const filteredData = data.data.filter((item) => item.region_locked === false)
+  return filteredData
 }
 export default function useTopAnime() {
-  return useQuery(['airing'], () => TopAiringAnime())
+  return useQuery(['episodes'], () => TopAiringAnime())
 }
