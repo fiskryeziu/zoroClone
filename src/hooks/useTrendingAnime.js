@@ -6,6 +6,6 @@ export const fetchTrendingAnime = async () => {
   const { data } = await axios.get('https://kitsu.io/api/edge/trending/anime')
   return data
 }
-export default function useAnime() {
+export default function useTrendingAnime() {
   return useQuery(['trending'], () => fetchTrendingAnime())
 }

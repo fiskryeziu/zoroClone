@@ -1,16 +1,20 @@
 import React from 'react'
 import { F } from './featured.style'
-import img from '../../assets/images/onepiece.jpg'
 
-const CartItem = () => {
+const CartItem = ({ data }) => {
   return (
     <F.CartItem>
       <F.PosterDiv>
-        <F.Img src={img} />
+        <F.Img src={data.images.webp.image_url} />
       </F.PosterDiv>
       <F.DetailsWrapper>
-        <F.Name>name 1</F.Name>
-        <F.Details>TV • Ep 25/25 • 24m</F.Details>
+        <F.Name>
+          {data.title_english === null ? data.title : data.title_english}
+        </F.Name>
+        <F.Details>
+          {data.type} • Ep {data.episodes == null ? '?' : data.episodes} •
+          {data.duration === 'Unknown' ? '' : data.duration.slice(0, 2) + 'm'}
+        </F.Details>
       </F.DetailsWrapper>
     </F.CartItem>
   )

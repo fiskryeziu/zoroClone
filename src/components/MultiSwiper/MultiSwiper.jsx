@@ -2,10 +2,12 @@ import React from 'react'
 
 import { Pagination } from 'swiper'
 import { S } from './swiper.style'
-import { data } from './data'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import useTrendingAnime from '../../hooks/useTrendingAnime'
 
 const MultiSwiper = () => {
+  const { data, isFetched } = useTrendingAnime()
+
   return (
     <S.SwiperContainer>
       <S.Swiper
@@ -37,21 +39,22 @@ const MultiSwiper = () => {
           prevEl: '.btn-prevTwo',
         }}
       >
-        {data.map((item, idx) => (
-          <S.SwiperSlide key={idx}>
-            <S.Item>
-              <S.Number>
-                <S.SpanNum>
-                  {idx + 1 >= 10 ? idx + 1 : '0' + (idx + 1)}
-                </S.SpanNum>
-                <S.ItemName>{item.name}</S.ItemName>
-              </S.Number>
-              <S.LinkImg to="/home">
-                <S.SwiperImg src={item.image} />
-              </S.LinkImg>
-            </S.Item>
-          </S.SwiperSlide>
-        ))}
+        {isFetched &&
+          data.data.map((item, idx) => (
+            <S.SwiperSlide key={idx}>
+              <S.Item>
+                <S.Number>
+                  <S.SpanNum>
+                    {idx + 1 >= 10 ? idx + 1 : '0' + (idx + 1)}
+                  </S.SpanNum>
+                  <S.ItemName>{item.attributes.canonicalTitle}</S.ItemName>
+                </S.Number>
+                <S.LinkImg to="/home">
+                  <S.SwiperImg src={item.attributes.posterImage.original} />
+                </S.LinkImg>
+              </S.Item>
+            </S.SwiperSlide>
+          ))}
       </S.Swiper>
       <S.NavBtn>
         <div className="btn-nextTwo">

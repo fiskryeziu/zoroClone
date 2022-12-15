@@ -3,14 +3,14 @@ import { F } from './featured.style'
 import { FaChevronRight } from 'react-icons/fa'
 import CartItem from './CartItem'
 
-const Cart = () => {
+const Cart = ({ name, data }) => {
   return (
     <F.Cart>
       <F.CartBox>
-        <F.CartTitle>Top Airing</F.CartTitle>
+        <F.CartTitle> {name}</F.CartTitle>
         <F.CartList>
-          {[1, 2, 3, 4, 5].map((item, idx) => (
-            <CartItem key={idx} />
+          {data.map((item, idx) => (
+            <CartItem key={idx} data={item} />
           ))}
         </F.CartList>
         <F.MoreLink>
