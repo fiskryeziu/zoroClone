@@ -1,13 +1,15 @@
 import React from 'react'
-import Card from '../components/Card/Card'
+import CardTwo from '../components/Card/CardTwo'
 import Footer from '../components/Footer/Footer'
 import GenreCard from '../components/GenreCard/GenreCard'
 import { M } from '../components/MainContainer/maincontainer.style'
 import MostViewedCard from '../components/MostViewedCard/MostViewedCard'
 import NavBar from '../components/NavBar/NavBar'
 import ShareButton from '../components/ShareButton'
+import { useAiring } from '../hooks/useAnime'
 
 const Airing = () => {
+  const { data, isFetched } = useAiring()
   return (
     <>
       <NavBar />
@@ -16,11 +18,8 @@ const Airing = () => {
         <M.Main>
           <M.Heading>Top Airing</M.Heading>
           <M.MovieList>
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(
-              (item, idx) => (
-                <Card key={idx} />
-              )
-            )}
+            {isFetched &&
+              data.data.map((item, idx) => <CardTwo key={idx} data={item} />)}
           </M.MovieList>
         </M.Main>
         <M.Aside>
