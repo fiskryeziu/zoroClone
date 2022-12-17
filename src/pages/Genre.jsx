@@ -21,7 +21,7 @@ const Genre = () => {
       <ShareButton borderRadius={false} />
       <M.MainWrapper>
         <M.Main>
-          <M.Heading>Movie Anime</M.Heading>
+          <M.Heading>{genre[0].toUpperCase() + genre.slice(1)} Anime</M.Heading>
           <M.MovieList>
             {isFetched &&
               data.map((item, idx) => <CardTwo key={idx} data={item} />)}

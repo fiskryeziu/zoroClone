@@ -14,7 +14,6 @@ M.Heading = styled.h2`
   margin: 1em 0;
 `
 M.MovieList = styled.div`
-  display: inline-block;
   margin-bottom: 2em;
 `
 

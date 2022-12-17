@@ -23,6 +23,7 @@ G.Item = styled.li`
   border-radius: 3px;
   text-overflow: ellipsis;
   font-weight: 500;
+  cursor: pointer;
   &:nth-of-type(7n + 1) {
     color: #d0e6a5;
   }
