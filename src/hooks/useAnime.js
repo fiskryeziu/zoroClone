@@ -49,3 +49,21 @@ export function useMovies() {
   }
   return useQuery(['movies'], () => fetchMovies())
 }
+export function useGenre({ genre }) {
+  const fetchGenre = async () => {
+    const { data } = await axios.get('https://api.jikan.moe/v4/anime')
+    const filteredData = data.data.filter((item) => {
+      if (item) {
+        return (
+          item?.genres[0]?.name.toLowerCase() === genre ||
+          item?.genres[1]?.name.toLowerCase() === genre ||
+          item?.genres[2]?.name.toLowerCase() === genre ||
+          item?.genres[3]?.name.toLowerCase() === genre ||
+          item?.genres[4]?.name.toLowerCase() === genre
+        )
+      }
+    })
+    return filteredData
+  }
+  return useQuery(['genres', genre], () => fetchGenre())
+}

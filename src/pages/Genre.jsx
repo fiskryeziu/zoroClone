@@ -1,4 +1,5 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 import CardTwo from '../components/Card/CardTwo'
 import Footer from '../components/Footer/Footer'
 import GenreCard from '../components/GenreCard/GenreCard'
@@ -6,10 +7,13 @@ import { M } from '../components/MainContainer/maincontainer.style'
 import MostViewedCard from '../components/MostViewedCard/MostViewedCard'
 import NavBar from '../components/NavBar/NavBar'
 import ShareButton from '../components/ShareButton'
-import { useMovies } from '../hooks/useAnime'
+import { useGenre } from '../hooks/useAnime'
 
-const Movies = () => {
-  const { data, isFetched } = useMovies()
+const Genre = () => {
+  const params = useParams()
+  console.log(params.genreName)
+  const genre = params.genreName
+  const { data, isFetched } = useGenre({ genre })
   console.log(data)
   return (
     <>
@@ -20,7 +24,7 @@ const Movies = () => {
           <M.Heading>Movie Anime</M.Heading>
           <M.MovieList>
             {isFetched &&
-              data.data.map((item, idx) => <CardTwo key={idx} data={item} />)}
+              data.map((item, idx) => <CardTwo key={idx} data={item} />)}
           </M.MovieList>
         </M.Main>
         <M.Aside>
@@ -35,4 +39,4 @@ const Movies = () => {
   )
 }
 
-export default Movies
+export default Genre
