@@ -1,10 +1,15 @@
 import React, { useEffect } from 'react'
 import { BsBroadcast } from 'react-icons/bs'
 import { FaAngleLeft, FaComments, FaLanguage, FaRandom } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { S } from './sidebar.style'
 
 const SideBar = ({ open, setOpen }) => {
+  const navigate = useNavigate()
+  const clickHandler = (e) => {
+    setOpen(false)
+    navigate(`/genre/${e.target.innerText.toLowerCase()}`)
+  }
   return (
     <S.SideMenu open={open}>
       <S.CloseButton onClick={() => setOpen(false)}>
@@ -57,16 +62,16 @@ const SideBar = ({ open, setOpen }) => {
         <S.Item>
           <p style={{ marginBottom: '1em' }}>Genre</p>
           <S.GenreList>
-            <S.GenreItem>Action</S.GenreItem>
-            <S.GenreItem>Adventure</S.GenreItem>
-            <S.GenreItem>Cars</S.GenreItem>
-            <S.GenreItem>Comedy</S.GenreItem>
-            <S.GenreItem>Dementia</S.GenreItem>
-            <S.GenreItem>Demons</S.GenreItem>
-            <S.GenreItem>Drama</S.GenreItem>
-            <S.GenreItem>Ecchi</S.GenreItem>
-            <S.GenreItem>Fantasy</S.GenreItem>
-            <S.GenreItem>Game</S.GenreItem>
+            <S.GenreItem onClick={clickHandler}>Action</S.GenreItem>
+            <S.GenreItem onClick={clickHandler}>Adventure</S.GenreItem>
+            <S.GenreItem onClick={clickHandler}>Cars</S.GenreItem>
+            <S.GenreItem onClick={clickHandler}>Comedy</S.GenreItem>
+            <S.GenreItem onClick={clickHandler}>Dementia</S.GenreItem>
+            <S.GenreItem onClick={clickHandler}>Demons</S.GenreItem>
+            <S.GenreItem onClick={clickHandler}>Drama</S.GenreItem>
+            <S.GenreItem onClick={clickHandler}>Ecchi</S.GenreItem>
+            <S.GenreItem onClick={clickHandler}>Fantasy</S.GenreItem>
+            <S.GenreItem onClick={clickHandler}>Game</S.GenreItem>
           </S.GenreList>
         </S.Item>
       </S.NavList>

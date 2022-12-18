@@ -112,6 +112,7 @@ S.GenreItem = styled.p`
   padding: 6px 15px;
   width: 49%;
   margin-right: 1%;
+  cursor: pointer;
 
   &:nth-of-type(7n + 1) {
     color: #d0e6a5;
