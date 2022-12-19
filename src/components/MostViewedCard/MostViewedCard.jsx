@@ -41,7 +41,7 @@ const MostViewedCard = () => {
           <label htmlFor="month">Month</label>
         </M.Wrapper>
       </M.Nav>
-      <Content />
+      <Content option={option} />
     </M.Card>
   )
 }
