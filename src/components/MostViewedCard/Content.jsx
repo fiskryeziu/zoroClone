@@ -3,14 +3,27 @@ import { M } from './mostviewed.style'
 import poster from '../../assets/images/narutoposter.jpg'
 import { FaEye, FaHeart } from 'react-icons/fa'
 import { mostViewed } from './data'
+import { useEffect } from 'react'
+import { useState } from 'react'
+import { useRef } from 'react'
 
 const Content = ({ option }) => {
-  console.log(option)
+  const hideOpacity = (e) => {
+    e.target.firstChild.style.opacity = '0'
+  }
+  const showOpacity = (e) => {
+    e.target.firstChild.style.opacity = '1'
+  }
   return (
     <M.Content>
       {option &&
         mostViewed[`${option}`].map((item, idx) => (
-          <M.Item key={idx}>
+          <M.Item
+            key={idx}
+            id="item"
+            onMouseLeave={showOpacity}
+            onMouseEnter={hideOpacity}
+          >
             <M.ItemNumber
               id={
                 idx + 1 === 1 || idx + 1 === 2 || idx + 1 === 3 ? 'active' : ''
