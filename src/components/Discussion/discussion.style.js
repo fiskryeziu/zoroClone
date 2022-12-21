@@ -45,12 +45,12 @@ D.NavTabs = styled.ul`
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 1em;
+  gap: 0.3em;
   margin-bottom: 1em;
 `
 D.TabOne = styled.li`
   font-size: 12px;
-  padding: 0.6em 1em;
+  padding: 0.6em 0.5em;
   border: 1px solid transparent;
 
   &:hover {
@@ -59,7 +59,7 @@ D.TabOne = styled.li`
   ${({ active }) =>
     active &&
     ` 
-    padding: 0.6em 1em;
+    padding: 0.6em .5em;
     border: 1px solid #cae962;
     border-radius: 20px;
     color: #cae962;
@@ -67,7 +67,7 @@ D.TabOne = styled.li`
 `
 D.TabTwo = styled.li`
   font-size: 12px;
-  padding: 0.6em 1em;
+  padding: 0.6em 0.5em;
   border: 1px solid transparent;
 
   &:hover {
@@ -76,7 +76,7 @@ D.TabTwo = styled.li`
   ${({ active }) =>
     active &&
     ` 
-    padding: 0.6em 1em;
+    padding: 0.6em .5em;
     border: 1px solid #cae962;
     border-radius: 20px;
     color: #cae962;
@@ -120,6 +120,10 @@ D.ToggleText = styled.div`
   font-size: 12px;
   font-weight: 500;
   line-height: 20px;
+
+  @media screen and (max-width: 575px) {
+    display: ${({ show }) => (show ? 'none' : 'block')};
+  }
 `
 D.ToggleDiv = styled.div`
   display: inline-block;

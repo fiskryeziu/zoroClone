@@ -26,7 +26,7 @@ const Discussion = () => {
       )}
       <D.WrapperRight show={show}>
         <D.ToggleDisplay active={show}>
-          <D.ToggleText>Show Comments</D.ToggleText>
+          <D.ToggleText show={show}>Show Comments</D.ToggleText>
           <D.ToggleDiv>
             <D.Toggle show={show} onClick={() => setShow(!show)}></D.Toggle>
           </D.ToggleDiv>
