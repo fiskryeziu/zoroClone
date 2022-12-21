@@ -3,9 +3,6 @@ import { M } from './mostviewed.style'
 import poster from '../../assets/images/narutoposter.jpg'
 import { FaEye, FaHeart } from 'react-icons/fa'
 import { mostViewed } from './data'
-import { useEffect } from 'react'
-import { useState } from 'react'
-import { useRef } from 'react'
 
 const Content = ({ option }) => {
   const hideOpacity = (e) => {
