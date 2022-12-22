@@ -11,10 +11,8 @@ import { useGenre } from '../hooks/useAnime'
 
 const Genre = () => {
   const params = useParams()
-  console.log(params.genreName)
   const genre = params.genreName
   const { data, isFetched } = useGenre({ genre })
-  console.log(data)
   return (
     <>
       <NavBar />

@@ -6,7 +6,6 @@ import { G } from './genre.style'
 const GenreCard = () => {
   const navigate = useNavigate()
   const clickHandler = (e) => {
-    console.log(e.target.innerText)
     navigate(`/genre/${e.target.innerText.toLowerCase()}`)
   }
   return (

@@ -8,7 +8,6 @@ import { useLatestEpisode } from '../../hooks/useAnime'
 
 const MainContainer = () => {
   const { data, isFetched } = useLatestEpisode()
-  console.log(data)
   return (
     <M.MainWrapper>
       <M.Main>

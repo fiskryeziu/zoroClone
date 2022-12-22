@@ -11,7 +11,6 @@ import { useSeries } from '../hooks/useAnime'
 
 const Series = () => {
   const { data, isFetched } = useSeries()
-  console.log(data)
   return (
     <>
       <NavBar />

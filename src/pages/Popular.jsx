@@ -10,7 +10,6 @@ import { usePopular } from '../hooks/useAnime'
 
 const Popular = () => {
   const { data, isFetched } = usePopular()
-  console.log(data)
   return (
     <>
       <NavBar />
