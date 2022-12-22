@@ -16,7 +16,7 @@ const CardTwo = ({ data }) => {
       <C.Details>
         <C.Name>{data.title}</C.Name>
         <C.MovieInfo>
-          {data.type} • {data.duration.slice(0, 2)}m
+          {data.type} • {data.duration}
         </C.MovieInfo>
       </C.Details>
     </C.Card>

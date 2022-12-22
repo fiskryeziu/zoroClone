@@ -10,6 +10,7 @@ import { useMovies } from '../hooks/useAnime'
 
 const Movies = () => {
   const { data, isFetched } = useMovies()
+  console.log(data)
   return (
     <>
       <NavBar />
