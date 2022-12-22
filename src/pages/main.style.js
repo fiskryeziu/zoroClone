@@ -181,6 +181,7 @@ M.Text = styled.p`
   white-space: nowrap;
   float: left;
   color: #aaaaaa;
+  cursor: pointer;
 
   &:hover {
     color: #cae962;
