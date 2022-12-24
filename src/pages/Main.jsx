@@ -6,6 +6,7 @@ import zoro from '../assets/images/zoro.png'
 import zorosmall from '../assets/images/zoro-small.jpeg'
 import { FaSearch, FaBars, FaArrowCircleRight, FaComment } from 'react-icons/fa'
 import ShareButton from '../components/ShareButton'
+import { useAiring, usePopular } from '../hooks/useAnime'
 
 const anime = [
   'Chainsaw Man',
@@ -22,6 +23,7 @@ const anime = [
 
 const Main = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const { data } = useAiring()
 
   const clickHandler = () => {
     setIsOpen(!isOpen)
@@ -75,8 +77,10 @@ const Main = () => {
 
           <M.textBox>
             <M.span>Top Search:</M.span>
-            {anime.map((item, idx) => (
-              <M.Text key={idx}>{item},</M.Text>
+            {data?.data.slice(0, 10).map((item, idx) => (
+              <M.Text key={idx}>
+                {item.title_english === null ? item.title : item.title_english},
+              </M.Text>
             ))}
           </M.textBox>
         </M.Left>
