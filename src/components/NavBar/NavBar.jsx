@@ -17,11 +17,15 @@ import logo from '../../assets/images/logo.png'
 import zorosmall from '../../assets/images/zoro-small.jpeg'
 import SideBar from './SideBar'
 import { useLocation } from 'react-router-dom'
+import useDebounce from '../../hooks/useDebounce'
 
 const NavBar = () => {
+  const [searchValue, setSearchValue] = useState('')
   const [open, setOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [fixed, setFixed] = useState(null)
+
+  const debouncedSearchedValue = useDebounce(searchValue, 600)
 
   const location = useLocation()
   const locationPath = location.pathname.slice(1)
@@ -71,7 +75,11 @@ const NavBar = () => {
           <N.LogoImg src={logo} alt="logo" />
         </N.Logo>
         <N.SearchForm>
-          <N.Input placeholder="Search anime..." />
+          <N.Input
+            placeholder="Search anime..."
+            value={searchValue}
+            onChange={(e) => setSearchValue(e.target.value)}
+          />
           <N.SearchIcon>
             <FaSearch size={16} />
           </N.SearchIcon>
