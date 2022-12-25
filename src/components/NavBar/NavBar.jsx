@@ -18,6 +18,7 @@ import zorosmall from '../../assets/images/zoro-small.jpeg'
 import SideBar from './SideBar'
 import { useLocation } from 'react-router-dom'
 import useDebounce from '../../hooks/useDebounce'
+import { useSearchAnime } from '../../hooks/useAnime'
 
 const NavBar = () => {
   const [searchValue, setSearchValue] = useState('')
@@ -26,6 +27,7 @@ const NavBar = () => {
   const [fixed, setFixed] = useState(null)
 
   const debouncedSearchedValue = useDebounce(searchValue, 600)
+  const { data, isLoading, error } = useSearchAnime(debouncedSearchedValue)
 
   const location = useLocation()
   const locationPath = location.pathname.slice(1)
@@ -84,6 +86,7 @@ const NavBar = () => {
             <FaSearch size={16} />
           </N.SearchIcon>
           <N.Filter>Filter</N.Filter>
+          {/* searched Data  */}
         </N.SearchForm>
         <N.SocialIcons>
           <N.Item style={{ backgroundColor: '#6f85d5' }}>

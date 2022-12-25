@@ -67,3 +67,21 @@ export function useGenre({ genre }) {
   }
   return useQuery(['genres', genre], () => fetchGenre())
 }
+
+export const useSearchAnime = (filter) => {
+  const fetchData = async () => {
+    const { data } = await axios.get(`https://api.jikan.moe/v4/anime`)
+
+    const filteredData = await data.data.filter((item) => {
+      if (item.title_english) {
+        return item.title_english.toLowerCase().includes(filter)
+      } else {
+        return item.title.toLowerCase().includes(filter)
+      }
+    })
+    return filteredData
+  }
+  return {
+    ...useQuery(['searchAnime', filter], () => fetchData()),
+  }
+}
