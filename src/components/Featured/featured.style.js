@@ -9,7 +9,7 @@ F.Container = styled.div`
   flex-wrap: wrap;
   margin-top: 3em;
 `
-F.Cart = styled.div`
+F.Card = styled.div`
   max-width: 25%;
   flex: 0 0 25%;
   margin-bottom: 1em;
@@ -23,7 +23,7 @@ F.Cart = styled.div`
     flex: 0 0 100%;
   }
 `
-F.CartBox = styled.div`
+F.CardBox = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 300px;
@@ -31,13 +31,13 @@ F.CartBox = styled.div`
   margin: 0 auto;
   background: #4a4b51;
 `
-F.CartTitle = styled.h3`
+F.CardTitle = styled.h3`
   padding: 1em;
   font-weight: 500;
   color: #cae962;
 `
-F.CartList = styled.ul``
-F.CartItem = styled.li`
+F.CardList = styled.ul``
+F.CardItem = styled.li`
   display: flex;
   position: relative;
   margin: 0;

@@ -1,9 +1,9 @@
 import React from 'react'
 import { F } from './featured.style'
 
-const CartItem = ({ data }) => {
+const CardItem = ({ data }) => {
   return (
-    <F.CartItem>
+    <F.CardItem>
       <F.PosterDiv>
         <F.Img src={data.images.webp.image_url} />
       </F.PosterDiv>
@@ -16,8 +16,8 @@ const CartItem = ({ data }) => {
           {data.duration === 'Unknown' ? '' : data.duration.slice(0, 2) + 'm'}
         </F.Details>
       </F.DetailsWrapper>
-    </F.CartItem>
+    </F.CardItem>
   )
 }
 
-export default CartItem
+export default CardItem
