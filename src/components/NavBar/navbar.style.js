@@ -86,6 +86,72 @@ N.SearchIcon = styled.button`
   text-align: center;
   z-index: 2;
 `
+N.SearchedListBox = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 41px;
+  width: 100%;
+  background-color: #2a2c31;
+`
+N.SearchItem = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding: 0.5em;
+  border-bottom: 1px dashed #5c5d63;
+
+  &:nth-of-type(n + 6) {
+    display: none;
+  }
+`
+N.SearchItemImg = styled.img`
+  width: 50px;
+`
+N.SearchItemDetails = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`
+N.SearchItemTitle = styled.p`
+  font-size: 14px;
+  line-height: 1.2em;
+  max-width: 200px;
+  margin-bottom: 5px;
+  height: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    color: #cae962;
+  }
+`
+N.SearchItemSmallTitle = styled.p`
+  font-size: 13px;
+  line-height: 1.2em;
+  max-width: 200px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #aaa;
+`
+N.SearchItemAiredTime = styled.p`
+  font-size: 13px;
+  line-height: 1.2em;
+  max-width: 100%;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #aaa;
+`
+
 N.SocialIcons = styled.div`
   display: flex;
   align-items: center;
