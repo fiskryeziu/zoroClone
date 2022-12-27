@@ -84,7 +84,6 @@ export const useSearchAnime = (filter) => {
   return {
     ...useQuery(['searchAnime', filter], () => {
       if (filter.length > 1) {
-        console.log('fetching')
         return fetchData()
       }
       return []

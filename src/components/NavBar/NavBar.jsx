@@ -26,11 +26,10 @@ const NavBar = () => {
   const [open, setOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [fixed, setFixed] = useState(null)
+  const [toggleSearch, setToggleSearch] = useState(false)
 
   const debouncedSearchedValue = useDebounce(searchValue, 600)
   const { data, isLoading } = useSearchAnime(debouncedSearchedValue)
-
-  console.log(data)
 
   const location = useLocation()
   const locationPath = location.pathname.slice(1)
@@ -64,6 +63,7 @@ const NavBar = () => {
       setFixed(false)
     }
   }, [locationPath])
+
   return (
     <N.Nav isScrolled={isScrolled} fixed={fixed}>
       {/* background layout   */}
@@ -90,8 +90,9 @@ const NavBar = () => {
           </N.SearchIcon>
           <N.Filter>Filter</N.Filter>
           <N.SearchedListBox>
-            {isLoading && <h1>loading....</h1>}
-            {debouncedSearchedValue.length > 1 &&
+            {searchValue.length > 1 && isLoading && <h1>loading....</h1>}
+            {searchValue.length > 1 &&
+              debouncedSearchedValue.length > 1 &&
               data &&
               data.map((item, idx) => (
                 <N.SearchItem key={idx}>
@@ -147,7 +148,45 @@ const NavBar = () => {
       {/* notification and profile  */}
       <N.Profile>
         <N.ProfileItem>
-          <N.ProfileSearch />
+          <N.ProfileSearch
+            onClick={() => setToggleSearch((prev) => !prev)}
+            active={toggleSearch ? 1 : 0}
+          />
+          {toggleSearch && (
+            <N.SearchToggle>
+              <N.SearchContent>
+                <N.ToggleInput
+                  placeholder="Search anime..."
+                  value={searchValue}
+                  onChange={(e) => setSearchValue(e.target.value)}
+                />
+                <N.ToggleSearchIcon>
+                  <FaSearch size={16} />
+                </N.ToggleSearchIcon>
+              </N.SearchContent>
+              <N.SearchedListBox>
+                {searchValue.length > 1 && isLoading && <h1>loading....</h1>}
+                {searchValue.length > 1 &&
+                  debouncedSearchedValue.length > 1 &&
+                  data &&
+                  data.map((item, idx) => (
+                    <N.SearchItem key={idx}>
+                      <N.SearchItemImg src={item.images.jpg.image_url} />
+                      <N.SearchItemDetails>
+                        <N.SearchItemTitle>{item.title}</N.SearchItemTitle>
+                        <N.SearchItemSmallTitle>
+                          {item.title}
+                        </N.SearchItemSmallTitle>
+                        <N.SearchItemAiredTime>
+                          {format(new Date(item.aired.from), 'MMM d, y')} •{' '}
+                          <span style={{ color: 'white' }}> {item.type}</span>
+                        </N.SearchItemAiredTime>
+                      </N.SearchItemDetails>
+                    </N.SearchItem>
+                  ))}
+              </N.SearchedListBox>
+            </N.SearchToggle>
+          )}
         </N.ProfileItem>
         <N.ProfileItem>
           <FaBell />

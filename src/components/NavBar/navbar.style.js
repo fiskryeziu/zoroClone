@@ -243,8 +243,52 @@ N.ProfileSearch = styled(FaSearch)`
   display: none;
   @media only screen and (max-width: 1300px) {
     display: initial;
+    color: ${({ active }) => (!active ? '#fff' : '#cae962')};
   }
 `
+N.SearchToggle = styled.div`
+  position: absolute;
+  background-color: rgba(32, 33, 37, 0.9);
+  display: flex;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  top: 70px;
+
+  @media screen and (max-width: 578px) {
+    top: 50px;
+  }
+`
+N.SearchContent = styled.div`
+  position: relative;
+  width: 80%;
+  height: 80%;
+  margin: auto 1em auto auto;
+`
+N.ToggleInput = styled.input`
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 1em;
+  color: #495057;
+  border-radius: 5px;
+`
+N.ToggleSearchIcon = styled.button`
+  position: absolute;
+  display: inline-block;
+  top: 3px;
+  right: 1em;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  padding: 0 12px;
+  color: #111;
+  background-color: transparent;
+  text-align: center;
+  z-index: 2;
+`
+
 N.ProfileImg = styled.img`
   width: 100%;
   height: 100%;
