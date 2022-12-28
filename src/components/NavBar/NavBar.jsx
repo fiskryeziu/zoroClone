@@ -20,6 +20,7 @@ import { useLocation } from 'react-router-dom'
 import useDebounce from '../../hooks/useDebounce'
 import { useSearchAnime } from '../../hooks/useAnime'
 import { format } from 'date-fns'
+import Spinner from '../Spinner/Spinner'
 
 const NavBar = () => {
   const [searchValue, setSearchValue] = useState('')
@@ -90,7 +91,7 @@ const NavBar = () => {
           </N.SearchIcon>
           <N.Filter>Filter</N.Filter>
           <N.SearchedListBox>
-            {searchValue.length > 1 && isLoading && <h1>loading....</h1>}
+            {searchValue.length > 1 && isLoading && <Spinner />}
             {searchValue.length > 1 &&
               debouncedSearchedValue.length > 1 &&
               data &&
@@ -165,7 +166,7 @@ const NavBar = () => {
                 </N.ToggleSearchIcon>
               </N.SearchContent>
               <N.SearchedListBox>
-                {searchValue.length > 1 && isLoading && <h1>loading....</h1>}
+                {searchValue.length > 1 && isLoading && <Spinner />}
                 {searchValue.length > 1 &&
                   debouncedSearchedValue.length > 1 &&
                   data &&
