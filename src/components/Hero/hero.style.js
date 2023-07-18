@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Link } from "react-router-dom"
+import styled from "styled-components"
+import { Swiper, SwiperSlide } from "swiper/react"
 
 export const H = {}
 
@@ -8,18 +8,18 @@ H.Swiper = styled(Swiper)`
   position: relative;
   display: flex;
   width: 100%;
-  height: 80vh;
+  height: 600px;
   overflow: hidden;
   z-index: 1;
 
+  @media screen and ((max-width: 1400px)) {
+    height: 570px;
+  }
   @media screen and (max-width: 1299px) {
-    height: 65vh;
+    height: 500px;
   }
   @media screen and (max-width: 759px) {
-    height: 55vh;
-  }
-  @media screen and (max-width: 479px) {
-    height: 50vh;
+    height: 350px;
   }
 `
 
@@ -27,7 +27,7 @@ H.Slides = styled(SwiperSlide)``
 
 H.ImgContainer = styled.div`
   &::before {
-    content: '';
+    content: "";
     z-index: 1;
     position: absolute;
     top: 0;
@@ -62,7 +62,7 @@ H.ImgContainer = styled.div`
   }
 
   &::after {
-    content: '';
+    content: "";
     z-index: 1;
     position: absolute;
     top: 0;
@@ -105,7 +105,7 @@ H.ImgContainer = styled.div`
       background: linear-gradient(0deg, #202125 0, rgba(32, 33, 37, 0) 82%);
     }
     &::before {
-      content: '';
+      content: "";
       opacity: 0;
     }
   }
