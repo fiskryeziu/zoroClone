@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom"
-import styled from "styled-components"
-import { Swiper, SwiperSlide } from "swiper/react"
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-export const H = {}
+export const H = {};
 
 H.Swiper = styled(Swiper)`
   position: relative;
@@ -21,9 +21,9 @@ H.Swiper = styled(Swiper)`
   @media screen and (max-width: 759px) {
     height: 350px;
   }
-`
+`;
 
-H.Slides = styled(SwiperSlide)``
+H.Slides = styled(SwiperSlide)``;
 
 H.ImgContainer = styled.div`
   &::before {
@@ -109,7 +109,7 @@ H.ImgContainer = styled.div`
       opacity: 0;
     }
   }
-`
+`;
 
 H.Img = styled.img`
   width: 100%;
@@ -117,9 +117,9 @@ H.Img = styled.img`
   position: absolute;
   object-fit: cover;
   @media screen and (max-width: 759px) {
-    opacity: 0.6;
+    opacity: 0.5;
   }
-`
+`;
 H.Content = styled.div`
   z-index: 1;
   width: 600px;
@@ -132,7 +132,6 @@ H.Content = styled.div`
   left: 2em;
   bottom: 2em;
   padding-bottom: 3em;
-
   bottom: 0 !important;
 
   @media screen and (max-width: 1200px) {
@@ -141,23 +140,33 @@ H.Content = styled.div`
   @media screen and (max-width: 759px) {
     width: 100%;
     padding-right: 100px;
+    box-shadow: none;
+    background: rgb(0, 0, 0, 0);
   }
-`
+  @media screen and (max-width: 480px) {
+    padding-right: 10px;
+    left: 10px;
+  }
+`;
 H.Rank = styled.div`
   color: #cae962;
-  font-size: 16px;
-
+  font-size: 14px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
   @media screen and (max-width: 1200px) {
-    font-size: 14px;
+    font-size: 1px;
   }
   @media screen and (max-width: 480px) {
     font-size: 10px;
   }
-`
+`;
 H.Title = styled.h1`
+  font-family: "Ubuntu", sans-serif;
   color: #fff;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   margin-bottom: 20px;
+  font-size: 50px;
 
   @media screen and (max-width: 1200px) {
     font-size: 30px;
@@ -171,9 +180,10 @@ H.Title = styled.h1`
     margin-bottom: 5px;
   }
   @media screen and (max-width: 480px) {
-    font-size: 16px;
+    font-size: 25px;
+    margin-bottom: 0px;
   }
-`
+`;
 H.Icons = styled.div`
   display: flex;
   gap: 1em;
@@ -183,13 +193,13 @@ H.Icons = styled.div`
   @media screen and (max-width: 759px) {
     display: none;
   }
-`
+`;
 H.Icon = styled.p`
   display: flex;
   align-items: center;
   gap: 0.3em;
   color: #fff;
-`
+`;
 H.IconSpan = styled.span`
   display: inline-block;
   padding: 3px 4px;
@@ -199,14 +209,16 @@ H.IconSpan = styled.span`
   line-height: 1em;
   font-weight: 600;
   font-size: 12px;
-`
+`;
 H.Description = styled.div`
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  font-family: "Ubuntu", sans-serif;
   color: #fff;
-  font-size: 12px;
+  font-size: 16px;
+  color: grey;
   margin: 2em 0;
 
   @media screen and (max-width: 1299px) {
@@ -214,9 +226,10 @@ H.Description = styled.div`
     -webkit-line-clamp: 2;
   }
   @media screen and (max-width: 480px) {
-    font-size: 11px;
+    font-size: 13px;
+    width: 80%;
   }
-`
+`;
 H.WatchBtn = styled.div`
   display: flex;
   align-items: center;
@@ -225,36 +238,40 @@ H.WatchBtn = styled.div`
   @media screen and (max-width: 320px) {
     flex-wrap: wrap;
   }
-`
+`;
 H.WatchLink = styled(Link)`
   display: flex;
   align-items: center;
   gap: 0.3em;
-  padding: 0.5em 0.6em;
+  padding: 0.7rem 1em;
   background-color: #cae962;
   color: #111;
-  font-size: 16px;
-  border-radius: 20px;
+  font-size: 18px;
+  border-radius: 30px;
+  font-family: "Ubuntu", sans-serif;
   @media screen and (max-width: 1200px) {
-    font-size: 14px;
+    font-size: 16px;
   }
   @media screen and (max-width: 480px) {
     font-size: 12px;
+    padding-inline: 1.2rem;
   }
-`
+`;
 H.DetailLink = styled(Link)`
   display: flex;
   align-items: center;
-  padding: 0.5em 0.6em;
+  padding: 0.7rem 1em;
   background-color: #4a4b51;
   color: #fff;
   gap: 0.3em;
-  font-size: 16px;
-  border-radius: 20px;
+  font-size: 18px;
+  border-radius: 30px;
+  font-family: "Ubuntu", sans-serif;
   @media screen and (max-width: 1200px) {
-    font-size: 14px;
+    font-size: 16px;
   }
   @media screen and (max-width: 480px) {
     font-size: 12px;
+    padding-inline: 1.2rem;
   }
-`
+`;

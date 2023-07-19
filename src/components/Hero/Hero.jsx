@@ -1,26 +1,26 @@
-import React from 'react'
+import React from "react";
 import {
   FaCalendar,
   FaChevronLeft,
   FaChevronRight,
   FaClock,
   FaPlayCircle,
-} from 'react-icons/fa'
+} from "react-icons/fa";
 import SwiperCore, {
   Navigation,
   Pagination,
   Scrollbar,
   A11y,
   Autoplay,
-} from 'swiper'
-import 'swiper/swiper-bundle.css'
-import { H } from './hero.style'
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay])
-import useTrendingAnime from '../../hooks/useTrendingAnime'
-import { format } from 'date-fns'
+} from "swiper";
+import "swiper/swiper-bundle.css";
+import { H } from "./hero.style";
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
+import useTrendingAnime from "../../hooks/useTrendingAnime";
+import { format } from "date-fns";
 
 const Hero = () => {
-  const { data, isFetched } = useTrendingAnime()
+  const { data, isFetched } = useTrendingAnime();
 
   return (
     <H.Swiper
@@ -34,8 +34,8 @@ const Hero = () => {
       modules={[Pagination]}
       className="swiper"
       navigation={{
-        nextEl: '.btn-next',
-        prevEl: '.btn-prev',
+        nextEl: ".btn-next",
+        prevEl: ".btn-prev",
       }}
     >
       {isFetched &&
@@ -59,11 +59,11 @@ const Hero = () => {
                 </H.Icon>
                 <H.Icon>
                   <FaCalendar size={12} />
-                  {format(new Date(item.attributes.startDate), 'MMM d, y')}
+                  {format(new Date(item.attributes.startDate), "MMM d, y")}
                 </H.Icon>
                 <H.IconSpan>HD</H.IconSpan>
               </H.Icons>
-              <H.Description>{item.description}</H.Description>
+              <H.Description>{item.attributes.description}</H.Description>
               <H.WatchBtn>
                 <H.WatchLink to="/watch">
                   <FaPlayCircle />
@@ -83,7 +83,7 @@ const Hero = () => {
         <FaChevronRight />
       </div>
     </H.Swiper>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
