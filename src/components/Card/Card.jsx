@@ -1,5 +1,6 @@
-import React from 'react'
-import { C } from './card.style'
+import React from 'react';
+import { FaPlay } from 'react-icons/fa';
+import { C } from './card.style';
 
 const Card = ({ data }) => {
   return (
@@ -12,12 +13,13 @@ const Card = ({ data }) => {
         <C.InfoR>
           <C.BtnR>Ep {data.episodes[0].mal_id}</C.BtnR>
         </C.InfoR>
+        <FaPlay />
       </C.Poster>
       <C.Details>
         <C.Name>{data.entry.title}</C.Name>
       </C.Details>
     </C.Card>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
