@@ -1,6 +1,6 @@
 i<p align="center">
 <a href=https://github.com/fiskryeziu/zoroClone target="_blank">
-<img src='/placeholder.jpg' width="100%" alt="Banner" />
+<img src='./src//assets//images/banner.png' width="100%" alt="Banner" />
 </a>
 </p>
 
