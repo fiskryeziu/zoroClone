@@ -21,7 +21,7 @@ ZoroClone: A ReactJS Anime Website Clone 🗡️📺 – Emulate the magic of an
 
 ## 🔍 Table of Contents
 
-* [📁 Project Structure](#project-structure)
+* [📁 Project Structure](#-project-structure)
 
 * [📝 Project Summary](#project-summary)
 
