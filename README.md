@@ -35,8 +35,6 @@ ZoroClone: A ReactJS Anime Website Clone 🗡️📺 – Emulate the magic of an
 
 * [☁️ Deploy](#deploy)
 
-* [📄 License](#license)
-
 ## 📁 Project Structure
 
 ```bash
@@ -65,10 +63,6 @@ ZoroClone: A ReactJS Anime Website Clone 🗡️📺 – Emulate the magic of an
 - [**src/pages**](src/pages): Directory for individual page components of the application.
 - [**src/assets**](src/assets): Directory for storing static assets like images used in the project.
 - [**src/hooks**](src/hooks): Directory for custom React hooks used in the project.
-- [**src/components/Card**](src/components/Card): Reusable card component used for displaying content.
-- [**src/components/Hero**](src/components/Hero): Component responsible for rendering the hero section of the application.
-- [**src/components/NavBar**](src/components/NavBar): Component for rendering the navigation bar of the application.
-- [**src/components/Footer**](src/components/Footer): Component for rendering the footer section of the application.
 - [**public**](public): Directory for public assets like HTML file and favicon.
 
 ## 💻 Stack
