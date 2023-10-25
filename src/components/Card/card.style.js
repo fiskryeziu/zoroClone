@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-export const C = {}
+export const C = {};
 
 C.Card = styled.div`
   width: calc(16.66% - 14px);
@@ -23,7 +23,7 @@ C.Card = styled.div`
     width: calc(50% - 6px);
     margin: 0 3px 6px;
   }
-`
+`;
 
 C.Poster = styled.div`
   display: block;
@@ -34,8 +34,26 @@ C.Poster = styled.div`
   font-size: 0;
   background-color: rgba(255, 255, 255, 0.1);
   overflow: hidden;
-
+  & svg {
+    fill: white;
+    position: absolute;
+    z-index: 9999999;
+    width: 30px;
+    height: 30px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    opacity: 0;
+  }
   &:hover {
+    cursor: pointer;
+    & svg {
+      opacity: 1;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -45,8 +63,10 @@ C.Poster = styled.div`
       bottom: 0;
       height: 100%;
       z-index: 1;
-      background-color: rgba(42, 44, 49, 0.6);
+      background-color: rgba(0, 0, 0, 0.3);
       transition: all 250ms ease;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
   }
 
@@ -67,7 +87,7 @@ C.Poster = styled.div`
     );
     background: linear-gradient(0deg, #2a2c31 0, rgba(42, 44, 49, 0) 76%);
   }
-`
+`;
 
 C.Image = styled.img`
   position: absolute;
@@ -78,7 +98,7 @@ C.Image = styled.img`
   left: 0;
   right: 0;
   bottom: 0;
-`
+`;
 
 C.InfoL = styled.div`
   position: absolute;
@@ -86,14 +106,14 @@ C.InfoL = styled.div`
   bottom: 3px;
   left: 10px;
   z-index: 3;
-`
+`;
 
 C.InfoR = styled.div`
   position: absolute;
   bottom: 3px;
   right: 10px;
   z-index: 3;
-`
+`;
 
 C.BtnL = styled.div`
   font-size: 12px;
@@ -111,7 +131,7 @@ C.BtnL = styled.div`
     font-size: 11px;
     padding: 1px 2px;
   }
-`
+`;
 
 C.BtnR = styled.div`
   font-size: 12px;
@@ -131,7 +151,7 @@ C.BtnR = styled.div`
   @media screen and (max-width: 479px) {
     padding: 1px 2px;
   }
-`
+`;
 
 C.Details = styled.div`
   color: #aaa;
@@ -139,7 +159,7 @@ C.Details = styled.div`
   padding: 10px;
   border-radius: 0 0 10px 10px;
   min-height: 84px;
-`
+`;
 C.Name = styled.h3`
   color: #fff;
   font-size: 14px;
@@ -156,10 +176,10 @@ C.Name = styled.h3`
   &:hover {
     color: #cae962;
   }
-`
+`;
 C.MovieInfo = styled.p`
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
-`
+`;
