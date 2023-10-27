@@ -1,10 +1,10 @@
-import React from 'react'
-import Card from '../Card/Card'
-import GenreCard from '../GenreCard/GenreCard'
-import MostViewedCard from '../MostViewedCard/MostViewedCard'
-import TrendingPosts from '../TredingPosts/TrendingPosts'
-import { M } from './maincontainer.style'
-import { useLatestEpisode } from '../../hooks/useAnime'
+import React from "react"
+import Card from "../Card/Card"
+import GenreCard from "../GenreCard/GenreCard"
+import MostViewedCard from "../MostViewedCard/MostViewedCard"
+import TrendingPosts from "../TredingPosts/TrendingPosts"
+import { M } from "./maincontainer.style"
+import { useLatestEpisode } from "../../hooks/useAnime"
 
 const MainContainer = () => {
   const { data, isFetched } = useLatestEpisode()

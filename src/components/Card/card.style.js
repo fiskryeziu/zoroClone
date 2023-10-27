@@ -48,6 +48,7 @@ C.Poster = styled.div`
     transition: all 0.5s ease 0s;
     -webkit-transition: all 0.5s ease 0s;
     opacity: 0;
+    z-index: 2;
   }
   &:hover {
     cursor: pointer;
