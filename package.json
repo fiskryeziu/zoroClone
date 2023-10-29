@@ -1,5 +1,5 @@
 {
-  "name": "zoroclone",
+  "name": "c",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -23,6 +23,11 @@
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
-    "vite": "^3.2.3"
-  }
+    "vite": "^3.2.3",
+    "webpack-cli": "^5.1.4"
+  },
+  "description": "<p align=\"center\">\r <a href=https://github.com/fiskryeziu/zoroClone target=\"_blank\">\r <img src='./src//assets//images/banner.png' width=\"100%\" alt=\"Banner\" />\r </a>\r </p>",
+  "main": "vite.config.js",
+  "author": "",
+  "license": "ISC"
 }
