@@ -215,10 +215,9 @@ H.Description = styled.div`
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #fff;
   font-size: 16px;
-  color: grey;
   margin: 2em 0;
 
   @media screen and (max-width: 1299px) {
