@@ -37,7 +37,7 @@ const Card = ({ data }) => {
       <C.Details>
         <C.Name>{data.entry.title}</C.Name>
       </C.Details>
-      <CardToolTip show={showTooltip} top={top} />
+      {showTooltip ? <CardToolTip show={showTooltip} top={top} /> : null}
     </C.Card>
   )
 }

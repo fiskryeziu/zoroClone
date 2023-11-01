@@ -3,7 +3,7 @@ import { CTooltip } from "./cardtooltip.style"
 import { data } from "../../data/mockData"
 import { FaPlay, FaStar } from "react-icons/fa"
 import { BiSolidCaptions, BiMicrophone } from "react-icons/bi"
-import { AiFillPlusCircle, AiOutlinePlus } from "react-icons/ai"
+import { AiOutlinePlus } from "react-icons/ai"
 
 const style = {
   hd: {
@@ -36,7 +36,12 @@ const style = {
 const CardToolTip = ({ show, top }) => {
   console.log(data)
   return (
-    <CTooltip.Wrapper className="tooltip" show={show} top={top}>
+    <CTooltip.Wrapper
+      className="tooltip"
+      show={show}
+      top={top}
+      onMouseLeave={() => console.log("hello")}
+    >
       <CTooltip.Title>
         Bleach: Thousand-Year Blood War - The Separation
       </CTooltip.Title>
