@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
-import { BsBroadcast } from 'react-icons/bs'
-import { FaAngleLeft, FaComments, FaLanguage, FaRandom } from 'react-icons/fa'
-import { Link, useNavigate } from 'react-router-dom'
-import { S } from './sidebar.style'
+import React, { useEffect } from "react"
+import { BsBroadcast } from "react-icons/bs"
+import { FaAngleLeft, FaComments, FaLanguage, FaRandom } from "react-icons/fa"
+import { Link, useNavigate } from "react-router-dom"
+import { S } from "./sidebar.style"
 
 const SideBar = ({ open, setOpen }) => {
   const navigate = useNavigate()
@@ -54,13 +54,7 @@ const SideBar = ({ open, setOpen }) => {
           <Link to="/tv-series">Tv Series</Link>
         </S.Item>
         <S.Item>
-          <Link to="/ovas">OVAs</Link>
-        </S.Item>
-        <S.Item>
-          <Link to="/specials">Specials</Link>
-        </S.Item>
-        <S.Item>
-          <p style={{ marginBottom: '1em' }}>Genre</p>
+          <p style={{ marginBottom: "1em" }}>Genre</p>
           <S.GenreList>
             <S.GenreItem onClick={clickHandler}>Action</S.GenreItem>
             <S.GenreItem onClick={clickHandler}>Adventure</S.GenreItem>

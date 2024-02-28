@@ -36,7 +36,8 @@ input {
 }
 
 body {
-    background-color: #202125;
+
+    background-color: hsl(228, 7%, 14%);
     position: relative;
 }
 

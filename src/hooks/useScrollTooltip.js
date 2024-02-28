@@ -6,8 +6,11 @@ function useScrollTooltip() {
 
     const handleScroll = () => {
         const card = document.querySelector(".card.active");
+        if (!card) return;
         const screenHeight = window.innerHeight;
         const cardRect = card.getBoundingClientRect();
+
+        console.log(cardRect);
         const cardMidpoint = cardRect.top + cardRect.height / 2;
         const screenMidpoint = screenHeight / 2;
 
